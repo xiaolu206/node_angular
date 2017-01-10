@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="/stylesheets/common.css">
+
+</head>
+
+<body  ng-app="appindex" ng-controller="controllerindex">
+<!--<header id="idHeader">标题</header>-->
+
+<div id="contain" >
+    <nav id="nav">
+        <ul id="logo">
+            <li><img src="/images/bokalogo.png"></li>
+            <li><img src="/images/icon_menu.png"><img src="/images/icon_menu_active.png"></li>
+        </ul>
+        <ul id="menunav" >
+            <li>
+                <img src="/images/icon_customer_01.png"><a ui-sref="perfer">NOS中心</a>
+                <ul>
+                    <li><img src="/images/icon_earnest_0.png"><a ui-sref="perfer.list1">参数设置</a></li>
+                    <li><img src="/images/icon_employee_white.png"><a ui-sref="perfer1">基础设置</a></li>
+                    <!--<li><img src="/images/icon_finance_white.png"><a ui-sref="perfer.list3">展厅设置</a></li>-->
+                    <!--<li><img src="/images/icon_findTrade_white.png"><a ui-sref="perfer.list4">现场设置</a></li>-->
+                </ul>
+            </li>
+            <!--<li>-->
+                <!--<img src="/images/icon_inventory.png"><a href="/11">账务中心</a>-->
+                <!--<ul>-->
+                    <!--<li><img src="/images/icon_earnest_0.png"><a href="#">参数设置</a></li>-->
+                    <!--<li><img src="/images/icon_employee_white.png"><a href="#">基础设置</a></li>-->
+                    <!--<li><img src="/images/icon_finance_white.png"><a href="#">展厅设置</a></li>-->
+                    <!--<li><img src="/images/icon_findTrade_white.png"><a href="#">现场设置</a></li>-->
+                <!--</ul>-->
+            <!--</li>-->
+
+            <!--<li><img src="/images/icon_menu_active.png"><span>人事中心</span></li>-->
+
+        </ul>
+    </nav>
+
+    <section id="idSection">
+        <header>标题</header>
+        <div id="content" ui-view>
+
+        </div>
+    </section>
+</div>
+
+<!--<script type="text/javascript" src="http://static.bokao2o.com/angular.js?v=1.4.3"></script>-->
+<!--<script type="text/javascript" src="http://static.bokao2o.com/angular-route.min.js"></script>-->
+<!--<script type="text/javascript" src="http://static.bokao2o.com/angular-cookies.min.js"></script>-->
+
+<script type="text/javascript" src="/javascripts/angular.js"></script>
+<script type="text/javascript" src="/javascripts/angular-ui-router.js"></script>
+<script type="text/javascript" src="/javascripts/controllerindex.js"></script>
+
+
+</body>
+</html>

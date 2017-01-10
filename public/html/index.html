@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 登录注册</title>
+    <link rel="stylesheet" href="/stylesheets/common.css">
+</head>
+<script type="text/javascript" src="javascripts/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="http://static.bokao2o.com/angular.js?v=1.4.3"></script>
+<script type="text/javascript" src="http://static.bokao2o.com/angular-route.min.js"></script>
+<script type="text/javascript" src="http://static.bokao2o.com/angular-cookies.min.js"></script>
+<body>
+
+<header id="index_header">
+    <ul>
+        <li><img src="/images/managerAdmin_logo_text_3.png"></li>
+        <li><a href="#"><img src="/images/managerAdmin_logo.png"></a></li>
+    </ul>
+</header>
+<section id="index_section">
+    <ul>
+        <li><img src="/images/manager_slide_images3.png"></li>
+        <li>
+            <div id="index_section_login">
+
+            </div>
+        </li>
+    </ul>
+</section>
+<footer id="index_footer">结尾</footer>
+
+<script type="text/javascript">
+    $(function () {
+
+       $("#index_section_login").load("html/login.html");
+
+    });
+</script>
+</body>
+</html>

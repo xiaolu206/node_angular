@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="/stylesheets/common.css">
+</head>
+
+<body>
+<!--<header id="idHeader">标题</header>-->
+
+<div id="contain">
+    <nav id="nav">
+        <ul id="logo">
+            <li><img src="/images/bokalogo.png"></li>
+            <li><img src="/images/icon_menu.png"><img src="/images/icon_menu_active.png"></li>
+        </ul>
+        <ul id="menunav">
+            <li>
+                <img src="/images/icon_customer_0.png"><span>设置中心</span>
+                <ul style="display: none">
+                    <li><img src="/images/icon_earnest_0.png"><a href="#">参数设置</a></li>
+                    <li><img src="/images/icon_employee_white.png"><a href="#">基础设置</a></li>
+                    <li><img src="/images/icon_finance_white.png"><a href="#">展厅设置</a></li>
+                    <li><img src="/images/icon_findTrade_white.png"><a href="#">现场设置</a></li>
+                </ul>
+            </li>
+            <li>
+                <img src="/images/icon_inventory.png"><span>账务中心</span>
+                <ul style="display: none">
+                    <li><img src="/images/icon_earnest_0.png"><a href="#">参数设置</a></li>
+                    <li><img src="/images/icon_employee_white.png"><a href="#">基础设置</a></li>
+                    <li><img src="/images/icon_finance_white.png"><a href="#">展厅设置</a></li>
+                    <li><img src="/images/icon_findTrade_white.png"><a href="#">现场设置</a></li>
+                </ul>
+            </li>
+
+            <li> <img src="/images/icon_menu_active.png"><span>人事中心</span></li>
+
+        </ul>
+
+    </nav>
+    <section id="idSection">
+        <header>标题</header>
+        <div id = "content">
+
+        </div>
+    </section>
+</div>
+
+<!--<footer id="idFooter">底部</footer>-->
+
+<script type="text/javascript" src="/javascripts/jquery-1.8.3.js" ></script>
+<script type="text/javascript">
+    $(function() {
+      //  $("#nav").load("/html/menuNav.html");
+
+
+        console.log( $("#logo").children().eq(1).filter("img").attr("src"));
+
+        $("#logo").children().eq(1).click(function () {
+
+            var width = $("#nav").width();
+
+            if (width > 100) {
+                $("#nav,#logo,#menunav").css("width", "40px");
+                $("#idSection").css("left", "40px")
+
+            }
+            else
+            {
+                $("#nav,#logo,#menunav").css("width", "190px");
+                $("#idSection").css("left", "190px");
+            }
+
+
+        });
+
+    });
+
+</script>
+</body>
+</html>

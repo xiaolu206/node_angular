@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="/stylesheets/common.css">
+    <script type="text/javascript" src="http://static.bokao2o.com/angular.js?v=1.4.3"></script>
+    <script type="text/javascript" src="http://static.bokao2o.com/angular-route.min.js"></script>
+    <script type="text/javascript" src="http://static.bokao2o.com/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="/javascripts/homeController.js"></script>
+</head>
+
+<body>
+<!--<header id="idHeader">标题</header>-->
+
+<div id="contain" >
+    <nav id="nav" ng-app="appMenu" ng-controller="controllerMenu">
+        <ul id="logo">
+            <li><img src="/images/bokalogo.png"></li>
+            <li><img src="/images/icon_menu.png"><img src="/images/icon_menu_active.png"></li>
+        </ul>
+        <ul id="menunav" >
+            <li>
+                <img src="/images/icon_customer_01.png"><span ng-click="toNavPage('login')">NOS中心</span>
+                <ul>
+                    <li><img src="/images/icon_earnest_0.png"><a href="/login">参数设置</a></li>
+                    <li><img src="/images/icon_employee_white.png"><a href="/Nos/login1">基础设置</a></li>
+                    <li><img src="/images/icon_finance_white.png"><a href="/Nos/menuNav">展厅设置</a></li>
+                    <li><img src="/images/icon_findTrade_white.png"><a href="#">现场设置</a></li>
+                </ul>
+            </li>
+            <li>
+                <img src="/images/icon_inventory.png"><a href="/11">账务中心</a>
+                <ul>
+                    <li><img src="/images/icon_earnest_0.png"><a href="#">参数设置</a></li>
+                    <li><img src="/images/icon_employee_white.png"><a href="#">基础设置</a></li>
+                    <li><img src="/images/icon_finance_white.png"><a href="#">展厅设置</a></li>
+                    <li><img src="/images/icon_findTrade_white.png"><a href="#">现场设置</a></li>
+                </ul>
+            </li>
+
+            <li><img src="/images/icon_menu_active.png"><span>人事中心</span></li>
+
+        </ul>
+        <div ng-view></div>
+    </nav>
+
+    <section id="idSection">
+        <header>标题</header>
+        <div id="content">
+
+        </div>
+    </section>
+</div>
+
+
+</body>
+</html>

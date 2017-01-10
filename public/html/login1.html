@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>-->
+    <!--<script src="../public/javascripts/angular.js"></script>-->
+    <!--<script src="../public/javascripts/angular-ui-router.js"></script>-->
+    <!--<script type="text/javascript" src="http://static.bokao2o.com/angular.js?v=1.4.3"></script>-->
+    <!--<script type="text/javascript" src="http://static.bokao2o.com/angular-route.min.js"></script>-->
+    <!--<script type="text/javascript" src="http://static.bokao2o.com/angular-cookies.min.js"></script>-->
+
+    <script>
+        var app= angular.module("appLogin",['ngRoute']);
+
+        app.controller("controller_login",function($scope,$routeParams,$http){
+
+            $scope.custId ="ROS4CS";
+            $scope.compId="001";
+            $scope.custname ="Admin";
+            $scope.password ="";
+
+            /**
+             * 登录
+             */
+            $scope.btnLogin= function(){
+                var item ={
+                    custId :$scope.custId,
+                    compId:$scope.compId,
+                    userName:$scope.custname,
+                    passWord:$scope.password
+                }
+
+                $http.post("/nos/login/web/getLoginUser",item).success(function(data){
+                    console.log(data);
+                })
+
+            };
+
+
+        });
+
+    </script>
+</head>
+<body ng-app="appLogin" ng-controller="controller_login">
+<div></div>
+<div><img src="/images/managerAdmin_login_title.png"></div>
+<div><input type="text" ng-model="custid" value="连锁"></div>
+<div><input type="text" ng-model="compid" value="门店"></div>
+<div><input type="text" ng-model="custname" value="账号"></div>
+<div><input type="text" ng-model="password" value="密码"></div>
+<div><input type="button"  value="登录" ng-click="btnLogin()">
+     <input type="button"  value="退出" ng-click="btnClose()"> </div>
+<div></div>
+
+</body>
+
+</html>
